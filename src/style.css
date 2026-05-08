@@ -22,6 +22,15 @@
     }
 }
 
+@keyframes show_text {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 :root {
     --rucu-red: #8b1a1a;
     --rucu-red-light: #a52020;
@@ -72,12 +81,18 @@ body {
     animation: float 3s ease-in-out infinite;
 }
 
-.text {
+.nav .text {
     width: 300px;
     display: flex;
     flex-direction: column;
     letter-spacing: 0.5px;
     text-align: center;
+
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    animation: show_text 0s ease forwards;
+    animation-delay: 1.15s;
+    will-change: opacity;
 }
 
 .text .rucu-text {
