@@ -1,6 +1,6 @@
 @keyframes stretch {
     0% {
-        width: 50%;
+        width: 75%;
     }
 
     100% {
@@ -20,7 +20,7 @@
 
 @keyframes stretch-3 {
     0% {
-        width: 38%;
+        width: 50%;
     }
 
     100% {
