@@ -10,11 +10,21 @@
 
 @keyframes stretch-2 {
     0% {
-        width: 25%;
+        width: 32%;
     }
 
     100% {
         width: 50%;
+    }
+}
+
+@keyframes stretch-3 {
+    0% {
+        width: 32.5%;
+    }
+
+    100% {
+        width: 75%;
     }
 }
 
@@ -222,7 +232,10 @@ body {
     }
 
     .central {
+        width: 75%;
         height: 300px;
+
+        animation: stretch-3 1.15s ease-in-out;
     }
 
     .central .title {
