@@ -8,6 +8,16 @@
     }
 }
 
+@keyframes stretch-2 {
+    0% {
+        width: 32.5%;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -61,6 +71,9 @@ body {
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
 
+    margin-left: auto;
+    margin-right: auto;
+
     align-items: center;
 
     animation: stretch 1.15s ease-in-out;
@@ -108,6 +121,83 @@ body {
     font-size: 20px;
 }
 
+.central {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 350px;
+    background-image: linear-gradient(to bottom, var(--rucu-red-light), var(--rucu-red));
+    border-bottom: var(--radius) solid var(--other-border);
+    border-radius: 2rem;
+
+    animation: stretch-2 1.15s ease-in-out;
+}
+
+.central .title {
+    display: flex;
+    padding: 20px;
+    padding-left: 50px;
+    padding-bottom: 1px;
+    font-weight: 600;
+    color: var(--bold-text);
+    font-size: 30px;
+}
+
+.central .body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    animation: show_text 0s ease forwards;
+    animation-delay: 1.15s;
+    will-change: opacity;
+}
+
+.central .body .info {
+    font-weight: 600;
+    width: 500px;
+}
+
+.central .body .info .text {
+    color: var(--text);
+    font-size: 20px;
+}
+
+.central .body .order {
+    display: flex;
+    flex-direction: row;
+}
+
+.central .body .order .order-item {
+    background-color: var(--bg);
+    border-bottom: 10px solid var(--other-border);
+    border-radius: 2rem;
+
+    width: 125px;
+    height: 75px;
+
+    text-align: center;
+}
+
+.central .body .order .order-item p {
+    padding-top: 3px;
+
+    color: var(--text);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.central .body .order .arrow {
+    padding: 10px;
+    font-size: 25px;
+    color: var(--bg);
+    padding-top: 0px;
+}
+
 @media (max-width: 480px) {
     .nav {
         height: 230px;
@@ -126,5 +216,35 @@ body {
 
     .text .other-text {
         font-size: 14px
+    }
+
+    .central {
+        height: 300px;
+    }
+
+    .central .title {
+        font-size: 20px;
+    }
+
+    .central .body .info {
+        width: 250px;
+    }
+
+    .central .body .info .text {
+        font-size: 14px;
+    }
+
+    .central .body .order .order-item {
+        width: 50px;
+        height: 30px;
+    }
+
+    .central .body .order .order-item p {
+        font-size: 7px;
+    }
+
+    .central .body .order .arrow {
+        font-size: 14px;
+        margin-top: 10px;
     }
 }
