@@ -1,0 +1,94 @@
+@keyframes stretch {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+:root {
+    --rucu-red: #8b1a1a;
+    --rucu-red-light: #a52020;
+    --bg: #f5f3ef;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --text-muted: #9b9b9b;
+    --border: #e4e0d8;
+    --other-border: #1a1a1a;
+    --bold-text: #e4e0d8;
+    --hover: #f0ece4;
+    --radius: 14px;
+}
+
+body {
+    font-family: "Oswald";
+    background-image: linear-gradient(to bottom, var(--text-muted), var(--bg));
+    margin: 0;
+}
+
+.nav {
+    width: 100%;
+    height: 350px;
+    background-image: linear-gradient(to bottom, var(--rucu-red-light), var(--rucu-red));
+    display: flex;
+    flex-direction: column;
+    border-bottom: var(--radius) solid var(--other-border);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
+    align-items: center;
+
+    animation: stretch 1.15s ease-in-out;
+}
+
+.nav .logo {
+    width: 125px;
+    height: 125px;
+    border: 5px solid var(--border);
+    border-radius: 10rem;
+    margin-top: 1rem;
+    
+    box-shadow: 0 10px var(--other-border);
+    cursor: pointer;
+
+    margin-bottom: 1px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.text {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.text .rucu-text {
+    font-weight: 600;
+    color: var(--bold-text);
+    margin-bottom: 1px;
+    font-size: 30px;
+}
+
+.text .other-text {
+    color: var(--text);
+    font-weight: 600;
+    font-size: 20px;
+}
