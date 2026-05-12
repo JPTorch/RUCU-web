@@ -75,6 +75,10 @@
     --radius: 14px;
 }
 
+* {
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Oswald", sans-serif;
     background-image: linear-gradient(to bottom, var(--text-muted), var(--bg));
@@ -215,6 +219,8 @@ body {
     height: 50px;
 
     text-align: center;
+
+    overflow: hidden;
 }
 
 .central .body .order .order-item p {
@@ -236,11 +242,14 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 50px;
-    margin-left: 10px;
+    margin-left: 95px;
+
+    width: 100%;
 }
 
 .this-term .next-button {
-    margin-right: 25px;
+    overflow: hidden;
+    margin-right: 100px;
     margin-top: 30px;
     width: 75px;
     height: 75px;
@@ -270,9 +279,6 @@ body {
     width: 50%;
     height: 135px;
 
-    margin-right: auto;
-    margin-left: auto;
-
     border-bottom: var(--radius) solid var(--other-border);
     border-top: 5px solid var(--other-border);
     border-left: 5px solid var(--other-border);
@@ -280,6 +286,9 @@ body {
     border-radius: 2rem;
 
     animation: stretch-2 1.15s ease-in-out;
+
+    margin-right: auto;
+    margin-left: auto;
 
     cursor: pointer;
 }
@@ -298,7 +307,6 @@ body {
     padding-right: 0;
     color: var(--rucu-red-light);
     height: 30px;
-    border-radius: var(--radius);
 
     user-select: none;
 
@@ -382,6 +390,9 @@ body {
 
     .this-term .event-div {
         width: 65%;
+
+        margin-right: auto;
+        margin-left: auto;
 
         animation: stretch-4 1.15s ease-in-out;
     }
