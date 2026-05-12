@@ -288,6 +288,7 @@ body {
 }
 
 .this-term .event-div .top-div .state-text {
+    font-weight: 600;
     font-size: 20px;
     margin-left: 10px;
     padding-right: 0;
@@ -305,9 +306,8 @@ body {
 }
 
 .this-term .event-div .top-div .date-text {
-    position: absolute;
-    margin-top: 24px;
-    margin-left: 22%;
+    margin-top: 26px;
+    margin-left: 20px;
     color: var(--text-muted);
 
     user-select: none;
@@ -384,6 +384,18 @@ body {
 
     .this-term .event-div .title-text {
         width: 250px;
+    }
+
+    .this-term .event-div .title-text {
+        font-size: 14px;
+    }
+
+    .this-term .event-div .date-text {
+        font-size: 14px;
+    }
+
+    .this-term .event-div .location-text {
+        font-size: 14px;
     }
 
     .central .top .title {
