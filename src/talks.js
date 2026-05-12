@@ -4,6 +4,7 @@ const parsed_data = data.talks;
 const length = Object.keys(parsed_data).length;
 
 const curr_date = new Date();
+curr_date.setHours(0, 0, 0, 0);
 
 const months = ["January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -21,6 +22,7 @@ const month = months.indexOf(month_str);
 const year = parseInt(year_str);
 
 const event_date = new Date(year, month, day);
+event_date.setHours(0, 0, 0, 0);
 
 const diff_ms = event_date - curr_date;
 const diff_days = diff_ms / (1000 * 60 * 60 * 24);
@@ -96,6 +98,7 @@ function render_event() {
     const year = parseInt(year_str);
 
     const event_date = new Date(year, month, day);
+    event_date.setHours(0, 0, 0, 0);
 
     const diff_ms = event_date - curr_date;
     const diff_days = diff_ms / (1000 * 60 * 60 * 24);
@@ -106,7 +109,7 @@ function render_event() {
         state = "Past";
     }
 
-    else if (diff_days < 1) {
+    else if (diff_days === 0) {
         state = "Today";
     }
 
