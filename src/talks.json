@@ -1,0 +1,51 @@
+{
+    "talks": {
+        "0": {
+            "title": "Small World Cafe Takeover",
+            "date": "23 April 2026",
+            "location": "Palmer 109"
+        },
+
+        "1": {
+            "title": "Finding Strength in God: David and Goliath",
+            "date": "30 April 2026",
+            "location": "Palmer 109"
+        },
+
+        "2": {
+            "title": "Gospel Over Gossip: David's Persecution",
+            "date": "7 May 2026",
+            "location": "Palmer 109"
+        },
+
+        "3": {
+            "title": "The Right to Kill: David and Saul",
+            "date": "14 May 2026",
+            "location": "Palmer 109"
+        },
+
+        "4": {
+            "title": "Lust and Biblical Love: David and Bathsheba",
+            "date": "21 May 2026",
+            "location": "ECF"
+        },
+
+        "5": {
+            "title": "Getting Closer to God: David's Prayer and Worship",
+            "date": "28 May 2026",
+            "location": "ECF"
+        },
+
+        "6": {
+            "title": "Building Roots in God: David's Devotion",
+            "date": "4 June 2026",
+            "location": "ECF"
+        },
+
+        "7": {
+            "title": "Leavers Central",
+            "date": "11 June 2026",
+            "location": "ECF"
+        }
+    }
+}

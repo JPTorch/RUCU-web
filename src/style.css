@@ -28,6 +28,16 @@
     }
 }
 
+@keyframes stretch-4 {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 65%;
+    }
+}
+
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -139,6 +149,9 @@ body {
     height: 400px;
     background-image: linear-gradient(to bottom, var(--rucu-red-light), var(--rucu-red));
     border-bottom: var(--radius) solid var(--other-border);
+    border-top: 5px solid var(--other-border);
+    border-left: 5px solid var(--other-border);
+    border-right: 5px solid var(--other-border);
     border-radius: 2rem;
 
     animation: stretch-2 1.15s ease-in-out;
@@ -219,6 +232,123 @@ body {
     margin-top: 0px;
 }
 
+.this-term {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.this-term .next-button {
+    margin-right: 25px;
+    margin-top: 30px;
+    width: 75px;
+    height: 75px;
+
+    border-bottom: var(--radius) solid var(--other-border);
+    border-top: 5px solid var(--other-border);
+    border-left: 5px solid var(--other-border);
+    border-right: 5px solid var(--other-border);
+    border-radius: 2rem;
+
+    text-align: center;
+}
+
+.this-term .next-button .next-icon {
+    margin-top: 3px;
+    font-size: 50px;
+    user-select: none;
+}
+
+.this-term .event-div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    background: var(--card);
+    width: 50%;
+    height: 135px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    border-bottom: var(--radius) solid var(--other-border);
+    border-top: 5px solid var(--other-border);
+    border-left: 5px solid var(--other-border);
+    border-right: 5px solid var(--other-border);
+    border-radius: 2rem;
+
+    animation: stretch-2 1.15s ease-in-out;
+}
+
+.this-term .event-div .top-div {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: -10px;
+}
+
+.this-term .event-div .top-div .state-text {
+    font-size: 20px;
+    margin-left: 10px;
+    padding-right: 0;
+    color: var(--rucu-red-light);
+    height: 30px;
+    border-radius: var(--radius);
+
+    user-select: none;
+
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    animation: show_text 0s ease forwards;
+    animation-delay: 1.15s;
+    will-change: opacity;
+}
+
+.this-term .event-div .top-div .date-text {
+    position: absolute;
+    margin-top: 24px;
+    margin-left: 22%;
+    color: var(--text-muted);
+
+    user-select: none;
+
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    animation: show_text 0s ease forwards;
+    animation-delay: 1.15s;
+    will-change: opacity;
+}
+
+.this-term .event-div .title-text {
+    font-size: 20px;
+    margin-top: -15px;
+    margin-left: 10px;
+    color: var(--text);
+
+    user-select: none;
+
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    animation: show_text 0s ease forwards;
+    animation-delay: 1.15s;
+    will-change: opacity;
+}
+
+.this-term .event-div .location-text {
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 100px;
+    color: var(--text-muted);
+
+    user-select: none;
+
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    animation: show_text 0s ease forwards;
+    animation-delay: 1.15s;
+    will-change: opacity;
+}
+
 @media (max-width: 480px) {
     .nav {
         height: 230px;
@@ -244,6 +374,16 @@ body {
         height: 300px;
 
         animation: stretch-3 1.15s ease-in-out;
+    }
+
+    .this-term .event-div {
+        width: 65%;
+
+        animation: stretch-4 1.15s ease-in-out;
+    }
+
+    .this-term .event-div .title-text {
+        width: 250px;
     }
 
     .central .top .title {
