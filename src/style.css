@@ -252,6 +252,8 @@ body {
     border-radius: 2rem;
 
     text-align: center;
+
+    cursor: pointer;
 }
 
 .this-term .next-button .next-icon {
@@ -278,6 +280,8 @@ body {
     border-radius: 2rem;
 
     animation: stretch-2 1.15s ease-in-out;
+
+    cursor: pointer;
 }
 
 .this-term .event-div .top-div {

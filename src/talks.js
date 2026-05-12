@@ -52,7 +52,7 @@ let next_icon = document.createElement("p");
 next_icon.innerText = ">";
 next_icon.classList.add("next-icon");
 
-let event_div = document.createElement("div");
+const event_div = document.createElement("div");
 event_div.classList.add("event-div");
 
 let top_div = document.createElement("div");
@@ -137,4 +137,14 @@ next_button.addEventListener("pointerdown", (e) => {
     }
 
     render_event();
+});
+
+event_div.addEventListener("pointerdown", (e) => {
+    if (location_text.innerText == "Location: Palmer 109") {
+        window.open("https://www.google.com/maps/place/Palmer+Building/@51.4412127,-0.9468389,17z/data=!3m1!4b1!4m6!3m5!1s0x4876852e17c20e87:0x702eedbb7bf32fe7!8m2!3d51.4412094!4d-0.9442693!16s%2Fg%2F11b6nq_hnc?entry=ttu&g_ep=EgoyMDI2MDUxMC4wIKXMDSoASAFQAw%3D%3D", "_self");
+    }
+
+    else {
+        window.open("https://www.google.com/maps/place/Earley+Christian+Fellowship+Church+in+Reading/@51.4462426,-0.9366181,17z/data=!3m1!4b1!4m6!3m5!1s0x487684b7be20c543:0x702372b9cf4160f3!8m2!3d51.4462393!4d-0.9340485!16s%2Fg%2F1wd3vk63?entry=ttu&g_ep=EgoyMDI2MDUxMC4wIKXMDSoASAFQAw%3D%3D", "_self")
+    }
 });
